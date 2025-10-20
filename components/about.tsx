@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Briefcase, Code, Palette } from "lucide-react"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Briefcase, Code, Palette } from "lucide-react";
 
 const About = () => {
   const fadeIn = {
@@ -15,28 +15,34 @@ const About = () => {
         duration: 0.5,
       },
     }),
-  }
+  };
 
   const highlights = [
     {
       icon: <Code className="h-8 w-8 text-primary" />,
-      title: "Web Development",
-      description: "Expert in HTML, TypeScript, and JavaScript with React and React Native frameworks.",
+      title: "Web & Mobile Development",
+      description:
+        "Expert in React, React Native, HTML, TypeScript, and other frameworks to build responsive and dynamic websites and applications.",
     },
     {
       icon: <Palette className="h-8 w-8 text-primary" />,
       title: "Design Skills",
-      description: "Proficient with Figma, Adobe Photoshop, and Corel Draw for creating stunning visuals.",
+      description:
+        "Proficient with Figma, Adobe Photoshop, Premiere Pro, and Corel Draw for creating stunning visuals.",
     },
     {
       icon: <Briefcase className="h-8 w-8 text-primary" />,
       title: "Professional Experience",
-      description: "5+ years of experience working with clients and teams to deliver exceptional websites.",
+      description:
+        "6+ years of experience working with clients and teams to deliver exceptional websites.",
     },
-  ]
+  ];
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-muted/50 dark:bg-gray-900/50">
+    <section
+      id="about"
+      className="py-16 md:py-24 bg-muted/50 dark:bg-gray-900/50"
+    >
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -56,9 +62,11 @@ const About = () => {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <p className="text-lg text-muted-foreground">
-            A creative and results-driven website designer with 5+ years of experience in crafting user-centered and
-            visually appealing websites. Proven ability to translate client needs into engaging designs, with expertise
-            in Typescript, Figma, Adobe Photoshop, Corel Draw, and Elementor. As I stay up-to-date, I am also very
+            A creative and results-driven website designer with 5+ years of
+            experience in crafting user-centered and visually appealing
+            websites. Proven ability to translate client needs into engaging
+            designs, with expertise in Typescript, Figma, Adobe Photoshop, Corel
+            Draw, and Elementor. As I stay up-to-date, I am also very
             knowledgeable with the use of advanced AI coding tools.
           </p>
         </motion.div>
@@ -75,7 +83,9 @@ const About = () => {
             >
               <Card className="h-full border-none shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6 flex flex-col items-center text-center">
-                  <div className="mb-4 p-3 rounded-full bg-primary/10">{item.icon}</div>
+                  <div className="mb-4 p-3 rounded-full bg-primary/10">
+                    {item.icon}
+                  </div>
                   <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
                   <p className="text-muted-foreground">{item.description}</p>
                 </CardContent>
@@ -85,7 +95,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

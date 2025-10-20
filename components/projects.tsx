@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent, CardFooter } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
-import { ExternalLink, Github } from "lucide-react"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import { Card, CardContent, CardFooter } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink, Github } from "lucide-react";
+import Image from "next/image";
 
 const Projects = () => {
   const projects = [
@@ -26,7 +26,7 @@ const Projects = () => {
       title: "Cheche Smith",
       description:
         "Designed and developed a vibrant e-commerce website for a fashion brand specializing in colorful, contemporary African-inspired clothing.",
-      image: "/images/chechesmith.jpeg",
+      image: "/images/chechesmithe.png",
       link: "https://chechesmith.com",
       github: "#",
       achievements: [
@@ -35,13 +35,73 @@ const Projects = () => {
       tags: ["E-commerce", "Fashion", "Responsive Design"],
     },
     {
+      title: "KredMart",
+      description:
+        "Kredmart is build on nextjs and tailwindcss. A platform offer user dashboard, merchant dashboard and admin dashboard. also integrated payment gateway.",
+      image: "/images/kredmart.png",
+      link: "https://kredmart.com",
+      github: "#",
+      achievements: [
+        "Created a professional corporate identity with modern design and clear service presentation.",
+      ],
+      tags: ["E-commerce", "Dashboard", "Payment Gateway"],
+    },
+    {
+      title: "NF Award",
+      description:
+        "Developed the official website for Nigeria Fitness Awards, a platform celebrating excellence in the fitness industry across Nigeria.",
+      image: "/images/nfaward-new.png",
+      link: "https://nfaward.com",
+      github: "#",
+      achievements: [
+        "Created an elegant, responsive platform that showcases nominees, partners, and event information for this prestigious fitness award.",
+      ],
+      tags: ["Fitness Industry", "Awards Platform", "Event Website"],
+    },
+    {
+      title: "Ark-of-light App",
+      description: "mobile application  designed for Android and ios users.",
+      image: "/images/arkoflight.png",
+      link: "#",
+      github: "https://github.com/Craigmindset/arkoflight",
+      achievements: [
+        "Mobile Application built with React Native and Expo for both Android and iOS platforms.",
+      ],
+      tags: ["Mobile Application", "Backend", "Admin Dashboard"],
+    },
+
+    {
+      title: "Prostar Technical",
+      description:
+        "Developed a modern website for a solar energy solutions provider, showcasing their residential and commercial services with a focus on sustainability.",
+      image: "/images/prostartechnical.png",
+      link: "https://prostartechnical.com/",
+      github: "#",
+      achievements: [
+        "Created a professional, responsive design that effectively communicates the company's renewable energy solutions and services.",
+      ],
+      tags: ["Account mgmt", "admin panel", "Next.js"],
+    },
+    {
+      title: "JC-Asethetics",
+      description:
+        "A Direct booking surgical and non-surgical aesthetic clinic website.",
+      image: "/images/jcasethetic.png",
+      link: "https://jcasethetic.com",
+      github: "#",
+      achievements: ["built using wordpress and elementor"],
+      tags: ["online booking", "e-shopping", "Responsive Design"],
+    },
+    {
       title: "Ventury Ltd",
       description:
         "Developed a comprehensive corporate website for Ventury Limited, showcasing their automation, instrumentation, and control services.",
       image: "/images/venturyltd-new.png",
       link: "https://venturyltd.com",
       github: "#",
-      achievements: ["Created a professional corporate identity with modern design and clear service presentation."],
+      achievements: [
+        "Created a professional corporate identity with modern design and clear service presentation.",
+      ],
       tags: ["Corporate Website", "Industrial Services", "Professional"],
     },
     {
@@ -66,49 +126,26 @@ const Projects = () => {
       achievements: [
         "Developed an engaging platform that encourages reading comprehension and critical thinking skills.",
       ],
-      tags: ["Education", "Reading Competition", "Youth Development"],
+      tags: ["php", "Elementor", "wordpress"],
     },
     {
-      title: "Dazeman Consult",
+      title: "JOB Alerts",
       description:
         "Designed and developed a remote job portal website with e-learning capabilities, helping connect professionals with remote work opportunities.",
-      image: "/images/dazemanconsult.jpeg",
-      link: "https://dazemanconsult.com",
+      image: "/images/jobalerts.png",
+      link: "https://jobalerts.com.ng",
       github: "#",
       achievements: [
-        "Created a responsive platform featuring job search functionality and an integrated e-learning system.",
+        "built with a custom theme, Elementor, Corel-Draw, Photoshop, and wordpress.",
       ],
       tags: ["Web Design", "Job Portal", "E-Learning"],
     },
-    {
-      title: "NF Award",
-      description:
-        "Developed the official website for Nigeria Fitness Awards, a platform celebrating excellence in the fitness industry across Nigeria.",
-      image: "/images/nfaward-new.png",
-      link: "https://nfaward.com",
-      github: "#",
-      achievements: [
-        "Created an elegant, responsive platform that showcases nominees, partners, and event information for this prestigious fitness award.",
-      ],
-      tags: ["Fitness Industry", "Awards Platform", "Event Website"],
-    },
-    {
-      title: "Prostar Technical",
-      description:
-        "Developed a modern website for a solar energy solutions provider, showcasing their residential and commercial services with a focus on sustainability.",
-      image: "/images/prostar-technical.jpeg",
-      link: "https://prostartechnical.vercel.app/",
-      github: "#",
-      achievements: [
-        "Created a professional, responsive design that effectively communicates the company's renewable energy solutions and services.",
-      ],
-      tags: ["Renewable Energy", "Solar Solutions", "Next.js"],
-    },
+
     {
       title: "Salvy.ng",
       description:
         "Developed a modern platform for a startup accelerator focused on empowering African entrepreneurs through strategic funding and advisory programs.",
-      image: "/images/salvy.jpeg",
+      image: "/images/salvy.png",
       link: "https://salvy.ng",
       github: "#",
       achievements: [
@@ -118,8 +155,10 @@ const Projects = () => {
     },
     {
       title: "Effideli",
-      description: "Professional Full-stack project with Admin login and user authentication.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/effideli-8bnxDoH5zK6YJZauh5hmmivB8wcMzD.png",
+      description:
+        "Professional Full-stack project with Admin login and user authentication.",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/effideli-8bnxDoH5zK6YJZauh5hmmivB8wcMzD.png",
       link: "https://effideli.com/",
       github: "https://github.com/Craigmindset/effifeli-web-app",
       achievements: [],
@@ -129,7 +168,8 @@ const Projects = () => {
       title: "Airdomax",
       description:
         "A collaborative project to clone and redesign pharmaceutical marketplace websites. The goal of the project is to redesign to suit the Africa market.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/airdomax-oxWhOe3dndEVJMNyGFkUp974Gjrt7n.png",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/airdomax-oxWhOe3dndEVJMNyGFkUp974Gjrt7n.png",
       link: "https://www.airdomax.com/",
       github: "https://github.com/Craigmindset/airdomax-web-app",
       achievements: [],
@@ -139,19 +179,19 @@ const Projects = () => {
       title: "SoftDrop Application",
       description:
         "A user authentication website, with an integrated Google Place map, that allows users to easily send and receive items within communities.",
-      image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/softdrop-b3wPelymITMRPd3d8wvVGnMgh5hxss.png",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/softdrop-b3wPelymITMRPd3d8wvVGnMgh5hxss.png",
       link: "https://softdrop.com.ng",
       github: "https://github.com/Craigmindset/softdropweb/",
       achievements: [],
       tags: ["Google Maps API", "Authentication", "Community"],
     },
     {
-      title: "Ventury Dev",
+      title: "Linkmi",
       description:
-        "A digital agency website that helps businesses transform their digital presence with stunning websites and mobile applications.",
-      image:
-        "https://sjc.microlink.io/Sv1hB7F0hTgwVG5BNz59kkLn0AKo3fsvx40f1Iq_ecqI_S6x10Bt1zQAjGNkz97UGmjpgfYKAeXvUelzFrgwCg.jpeg",
-      link: "https://venturydev.com",
+        "A Clinical site that connects africa to international medical service providers for advanced medical treatments.",
+      image: "/images/linkmi.png",
+      link: "https://linkmi.com.ng",
       github: "#",
       achievements: [],
       tags: ["Web Design", "Digital Agency", "UI/UX"],
@@ -160,8 +200,7 @@ const Projects = () => {
       title: "Gospel Pillars ERP",
       description:
         "A church management system that helps Gospel Pillars Church manage their operations, members, and resources efficiently.",
-      image:
-        "https://sjc.microlink.io/V0-VbamgMOIRCmOekVZ_o4Ae2AS5ESjJepM5RjYVB4-j_4iU8ej1DzfKXxqturI9FNMXAKmOhgTPrE_rVMQENw.jpeg",
+      image: "/images/gospelpillars.png",
       link: "https://gospelpillarserp.vercel.app",
       github: "#",
       achievements: [],
@@ -171,14 +210,13 @@ const Projects = () => {
       title: "Oxroad School",
       description:
         "An educational institution website designed to showcase the school's programs, admission process, and provide information for parents and students.",
-      image:
-        "https://sjc.microlink.io/gr3r1iQVCbKsKcDLaYWiRVt6iQzufQfl15k00a547mERQeGJkN-Fot5POFqXwaDviSFuCIYZshuX-Zjs7d1_Lw.jpeg",
+      image: "/images/oxroadschool.png",
       link: "https://oxroadschool.vercel.app",
       github: "#",
       achievements: [],
       tags: ["Education", "School Website", "Responsive Design"],
     },
-  ]
+  ];
 
   return (
     <section id="projects" className="py-16 md:py-24">
@@ -212,15 +250,21 @@ const Projects = () => {
                   />
                 </div>
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-                  <p className="text-muted-foreground mb-4">{project.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-4">
+                    {project.description}
+                  </p>
 
                   {project.achievements && project.achievements.length > 0 && (
                     <ul className="space-y-2 mb-4">
                       {project.achievements.map((achievement, i) => (
                         <li key={i} className="flex items-start">
                           <span className="text-primary mr-2">★</span>
-                          <span className="text-muted-foreground">{achievement}</span>
+                          <span className="text-muted-foreground">
+                            {achievement}
+                          </span>
                         </li>
                       ))}
                     </ul>
@@ -266,7 +310,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
+export default Projects;

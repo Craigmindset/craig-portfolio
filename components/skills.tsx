@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 const Skills = () => {
   const skillCategories = [
     {
       title: "Languages",
-      skills: ["HTML", "TypeScript", "JavaScript"],
+      skills: ["HTML", "TypeScript", "JavaScript", "Python3"],
     },
     {
       title: "Frameworks",
@@ -16,7 +16,7 @@ const Skills = () => {
     },
     {
       title: "Tools",
-      skills: ["MySQL", "Excel", "MongoDB", "Github"],
+      skills: ["MySQL", "Git", "MongoDB", "Github", "Supabase", "Vercel"],
     },
     {
       title: "CMS",
@@ -24,9 +24,15 @@ const Skills = () => {
     },
     {
       title: "Design",
-      skills: ["Figma", "Adobe Photoshop", "Corel Draw", "Video Editing", "Content Writing"],
+      skills: [
+        "Figma",
+        "Adobe Photoshop",
+        "Corel Draw",
+        "Video Editing",
+        "Content Writing",
+      ],
     },
-  ]
+  ];
 
   return (
     <section id="skills" className="py-16 md:py-24">
@@ -52,10 +58,16 @@ const Skills = () => {
             >
               <Card className="h-full border-none shadow-md hover:shadow-lg transition-shadow">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4 text-primary">{category.title}</h3>
+                  <h3 className="text-xl font-semibold mb-4 text-primary">
+                    {category.title}
+                  </h3>
                   <div className="flex flex-wrap gap-2">
                     {category.skills.map((skill, skillIndex) => (
-                      <Badge key={skillIndex} variant="secondary" className="px-3 py-1 text-sm font-medium">
+                      <Badge
+                        key={skillIndex}
+                        variant="secondary"
+                        className="px-3 py-1 text-sm font-medium"
+                      >
                         {skill}
                       </Badge>
                     ))}
@@ -74,13 +86,14 @@ const Skills = () => {
           className="mt-16 text-center"
         >
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            I continuously expand my skill set to stay current with the latest technologies and design trends, ensuring
-            I deliver cutting-edge solutions for every project.
+            I continuously expand my skill set to stay current with the latest
+            technologies and design trends, ensuring I deliver cutting-edge
+            solutions for every project.
           </p>
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Skills
+export default Skills;
