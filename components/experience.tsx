@@ -1,14 +1,14 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { ExternalLink } from "lucide-react"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { ExternalLink } from "lucide-react";
 
 const Experience = () => {
   const experiences = [
     {
-      title: "Website Designer",
+      title: "Senior Frontend Developer",
       company: "Tecwurld Limited",
       period: "June 2023 - Present",
       link: "https://tecwurld.com",
@@ -41,10 +41,13 @@ const Experience = () => {
         "Optimized website performance, reducing load times by 40% through strategic use of web technologies and design best practices, enhancing overall user experience.",
       ],
     },
-  ]
+  ];
 
   return (
-    <section id="experience" className="py-16 md:py-24 bg-muted/50 dark:bg-gray-900/50">
+    <section
+      id="experience"
+      className="py-16 md:py-24 bg-muted/50 dark:bg-gray-900/50"
+    >
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -71,7 +74,9 @@ const Experience = () => {
                     <div>
                       <h3 className="text-xl font-semibold">{exp.title}</h3>
                       <div className="flex items-center mt-1">
-                        <p className="text-primary font-medium">{exp.company}</p>
+                        <p className="text-primary font-medium">
+                          {exp.company}
+                        </p>
                         {exp.link && (
                           <a
                             href={exp.link}
@@ -93,7 +98,9 @@ const Experience = () => {
                     {exp.achievements.map((achievement, i) => (
                       <li key={i} className="flex items-start">
                         <span className="text-primary mr-2">★</span>
-                        <span className="text-muted-foreground">{achievement}</span>
+                        <span className="text-muted-foreground">
+                          {achievement}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -104,7 +111,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
