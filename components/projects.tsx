@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { Card, CardContent, CardFooter } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -7,8 +8,29 @@ import { Button } from "@/components/ui/button";
 import { ExternalLink, Github } from "lucide-react";
 import Image from "next/image";
 
+type Category = "Digital & Design" | "Website" | "Social Management";
+
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+  github?: string;
+  achievements?: string[];
+  tags: string[];
+  category: Category;
+};
+
 const Projects = () => {
-  const projects = [
+  const [activeCategory, setActiveCategory] = useState<Category>("Website");
+
+  const categories: Category[] = [
+    "Digital & Design",
+    "Website",
+    "Social Management",
+  ];
+
+  const websiteProjects: Project[] = [
     {
       title: "Malowallet",
       description:
@@ -21,6 +43,7 @@ const Projects = () => {
         "Developed and fine-tuned user journey on the on-boarding process, thereby achieving 23% faster boarding time.",
       ],
       tags: ["React", "MongoDB", "Web3"],
+      category: "Website",
     },
     {
       title: "Cheche Smith",
@@ -33,6 +56,7 @@ const Projects = () => {
         "Created a visually striking online store with intuitive navigation and seamless shopping experience.",
       ],
       tags: ["E-commerce", "Fashion", "Responsive Design"],
+      category: "Website",
     },
     {
       title: "KredMart",
@@ -45,6 +69,7 @@ const Projects = () => {
         "Created a professional corporate identity with modern design and clear service presentation.",
       ],
       tags: ["E-commerce", "Dashboard", "Payment Gateway"],
+      category: "Website",
     },
     {
       title: "NF Award",
@@ -57,6 +82,7 @@ const Projects = () => {
         "Created an elegant, responsive platform that showcases nominees, partners, and event information for this prestigious fitness award.",
       ],
       tags: ["Fitness Industry", "Awards Platform", "Event Website"],
+      category: "Website",
     },
     {
       title: "Ark-of-light App",
@@ -68,6 +94,7 @@ const Projects = () => {
         "Mobile Application built with React Native and Expo for both Android and iOS platforms.",
       ],
       tags: ["Mobile Application", "Backend", "Admin Dashboard"],
+      category: "Website",
     },
 
     {
@@ -81,6 +108,7 @@ const Projects = () => {
         "Created a professional, responsive design that effectively communicates the company's renewable energy solutions and services.",
       ],
       tags: ["Account mgmt", "admin panel", "Next.js"],
+      category: "Website",
     },
     {
       title: "JC-Asethetics",
@@ -91,6 +119,7 @@ const Projects = () => {
       github: "#",
       achievements: ["built using wordpress and elementor"],
       tags: ["online booking", "e-shopping", "Responsive Design"],
+      category: "Website",
     },
     {
       title: "Ventury Ltd",
@@ -103,6 +132,7 @@ const Projects = () => {
         "Created a professional corporate identity with modern design and clear service presentation.",
       ],
       tags: ["Corporate Website", "Industrial Services", "Professional"],
+      category: "Website",
     },
     {
       title: "The Citadel Schools",
@@ -115,6 +145,7 @@ const Projects = () => {
         "Built an informative platform that effectively communicates the school's educational excellence and programs.",
       ],
       tags: ["Education", "Primary School", "Academic Excellence"],
+      category: "Website",
     },
     {
       title: "Bookville Reading Competition",
@@ -127,6 +158,7 @@ const Projects = () => {
         "Developed an engaging platform that encourages reading comprehension and critical thinking skills.",
       ],
       tags: ["php", "Elementor", "wordpress"],
+      category: "Website",
     },
     {
       title: "JOB Alerts",
@@ -139,6 +171,7 @@ const Projects = () => {
         "built with a custom theme, Elementor, Corel-Draw, Photoshop, and wordpress.",
       ],
       tags: ["Web Design", "Job Portal", "E-Learning"],
+      category: "Website",
     },
 
     {
@@ -152,6 +185,7 @@ const Projects = () => {
         "Created an engaging user interface that effectively communicates the accelerator's mission and programs.",
       ],
       tags: ["Startup Platform", "Accelerator", "Investment"],
+      category: "Website",
     },
     {
       title: "Effideli",
@@ -163,6 +197,7 @@ const Projects = () => {
       github: "https://github.com/Craigmindset/effifeli-web-app",
       achievements: [],
       tags: ["Full-stack", "Authentication", "Admin Dashboard"],
+      category: "Website",
     },
     {
       title: "Airdomax",
@@ -174,6 +209,7 @@ const Projects = () => {
       github: "https://github.com/Craigmindset/airdomax-web-app",
       achievements: [],
       tags: ["UI/UX", "E-commerce", "Marketplace"],
+      category: "Website",
     },
     {
       title: "SoftDrop Application",
@@ -185,6 +221,7 @@ const Projects = () => {
       github: "https://github.com/Craigmindset/softdropweb/",
       achievements: [],
       tags: ["Google Maps API", "Authentication", "Community"],
+      category: "Website",
     },
     {
       title: "Linkmi",
@@ -195,6 +232,7 @@ const Projects = () => {
       github: "#",
       achievements: [],
       tags: ["Web Design", "Digital Agency", "UI/UX"],
+      category: "Website",
     },
     {
       title: "Gospel Pillars ERP",
@@ -205,6 +243,7 @@ const Projects = () => {
       github: "#",
       achievements: [],
       tags: ["Church Management", "ERP", "Authentication"],
+      category: "Website",
     },
     {
       title: "Oxroad School",
@@ -215,11 +254,101 @@ const Projects = () => {
       github: "#",
       achievements: [],
       tags: ["Education", "School Website", "Responsive Design"],
+      category: "Website",
     },
   ];
 
+  const digitalDesignProjects: Project[] = [
+    {
+      title: "Digital Design 01",
+      description: "Creative campaign and product visual design work.",
+      image: "/images/design5.jpg",
+      link: "#",
+      tags: ["Digital & Design", "Branding", "Visual Design"],
+      category: "Digital & Design",
+    },
+    {
+      title: "Digital Design 02",
+      description: "Campaign artwork focused on visual storytelling.",
+      image: "/images/campaign%20design1a.jpg",
+      link: "#",
+      tags: ["Digital & Design", "Campaign", "Creative"],
+      category: "Digital & Design",
+    },
+    {
+      title: "Digital Design 03",
+      description: "Social-first brand visual concept and execution.",
+      image: "/images/design1.png",
+      link: "#",
+      tags: ["Digital & Design", "Social Creative", "Layout"],
+      category: "Digital & Design",
+    },
+    {
+      title: "Digital Design 04",
+      description: "High-impact digital creative for online campaigns.",
+      image: "/images/design2.png",
+      link: "#",
+      tags: ["Digital & Design", "Ads", "Design"],
+      category: "Digital & Design",
+    },
+    {
+      title: "Digital Design 05",
+      description: "Design direction for visual content management.",
+      image: "/images/design3.png",
+      link: "#",
+      tags: ["Digital & Design", "Brand Visuals", "Creative"],
+      category: "Digital & Design",
+    },
+    {
+      title: "Digital Design 06",
+      description: "Polished brand communication design output.",
+      image: "/images/design4.png",
+      link: "#",
+      tags: ["Digital & Design", "Graphic Design", "Content"],
+      category: "Digital & Design",
+    },
+  ];
+
+  const socialManagementProjects: Project[] = [
+    {
+      title: "Deeparfums London",
+      description: "Social media management and brand growth execution.",
+      image: "/images/mywork.png",
+      link: "https://www.instagram.com/deeparfumslondon?igsh=bnZoOWhwdmFkcnls",
+      tags: ["Social Management", "Instagram", "Brand Growth"],
+      category: "Social Management",
+    },
+    {
+      title: "Lookbox Nigeria",
+      description: "Content planning and performance-focused social delivery.",
+      image: "/images/mywork0.png",
+      link: "https://www.instagram.com/lookbox.nigeria?igsh=MTZzdmVpb21yN2c0Zg==",
+      tags: ["Social Management", "Content Strategy", "Engagement"],
+      category: "Social Management",
+    },
+    {
+      title: "Softdrop Tech",
+      description: "Community-oriented social media account management.",
+      image: "/images/mywork22.png",
+      link: "https://www.instagram.com/softdrop.tech?igsh=anF2MDEwY2htcHRq",
+      tags: ["Social Management", "Community", "Social Growth"],
+      category: "Social Management",
+    },
+  ];
+
+  const projects = [
+    ...websiteProjects,
+    ...digitalDesignProjects,
+    ...socialManagementProjects,
+  ];
+
+  const filteredProjects = useMemo(
+    () => projects.filter((project) => project.category === activeCategory),
+    [activeCategory, projects],
+  );
+
   return (
-    <section id="projects" className="py-16 md:py-24">
+    <section id="projects" className="py-16 md:py-20">
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -231,14 +360,27 @@ const Projects = () => {
           Featured <span className="gradient-text">Projects</span>
         </motion.h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
-          {projects.map((project, index) => (
+        <div className="flex flex-wrap gap-3 mt-8">
+          {categories.map((category) => (
+            <Button
+              key={category}
+              type="button"
+              variant={activeCategory === category ? "default" : "outline"}
+              onClick={() => setActiveCategory(category)}
+            >
+              {category}
+            </Button>
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+          {filteredProjects.map((project, index) => (
             <motion.div
-              key={index}
+              key={`${project.title}-${index}`}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
             >
               <Card className="h-full overflow-hidden border-none shadow-md hover:shadow-lg transition-shadow">
                 <div className="relative h-48 w-full overflow-hidden">
@@ -261,7 +403,7 @@ const Projects = () => {
                     <ul className="space-y-2 mb-4">
                       {project.achievements.map((achievement, i) => (
                         <li key={i} className="flex items-start">
-                          <span className="text-primary mr-2">★</span>
+                          <span className="text-primary mr-2">*</span>
                           <span className="text-muted-foreground">
                             {achievement}
                           </span>
@@ -280,17 +422,19 @@ const Projects = () => {
                 </CardContent>
                 <CardFooter className="px-6 pb-6 pt-0">
                   <div className="flex gap-4">
-                    <Button asChild variant="outline" size="sm">
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        View Project <ExternalLink className="h-4 w-4" />
-                      </a>
-                    </Button>
-                    {project.github !== "#" && (
+                    {project.link !== "#" && (
+                      <Button asChild variant="outline" size="sm">
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2"
+                        >
+                          View Project <ExternalLink className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    )}
+                    {project.github && project.github !== "#" && (
                       <Button asChild variant="ghost" size="sm">
                         <a
                           href={project.github}

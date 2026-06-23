@@ -2,13 +2,13 @@
 
 import { Button } from "@/components/ui/button";
 import { motion } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Download } from "lucide-react";
+import { ArrowRight, Github, Linkedin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 const Hero = () => {
   return (
-    <section className="relative overflow-hidden py-20 md:py-32 flex items-center min-h-[calc(100vh-4rem)]">
+    <section className="relative overflow-hidden py-20 md:py-22 flex items-center min-h-[calc(100vh-4rem)]">
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-gray-950 dark:to-gray-900" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-background to-transparent" />
@@ -36,13 +36,12 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-muted-foreground mb-10"
             >
-              If you're looking for a developer whose commitment is built on
-              teamwork and achieving set goals, then{" "}
-              <span className="text-yellow-400">I'm your guy</span>. My
-              experience spans user empathy, design, understanding the build
-              process, and working within tight deadlines. A warrior is tested
-              in battle, so invite me to join your team and let's take on the
-              challenge!
+              If you're looking for a Digital content designer and Developer
+              whose commitment is built on teamwork and achieving set goals,
+              then <span className="text-yellow-400">I'm your guy</span>. My
+              experience spans marketing, photography, content management, and
+              application development. So invite me to join your team and let's
+              take on the challenge!
             </motion.p>
 
             <motion.div
@@ -57,9 +56,9 @@ const Hero = () => {
                 </Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="gap-2">
-                <a href="/craig-iredia-resume.pdf" download>
-                  Download CV <Download className="h-4 w-4" />
-                </a>
+                <Link href="#projects">
+                  See My Works <ArrowRight className="h-4 w-4" />
+                </Link>
               </Button>
             </motion.div>
 
@@ -100,7 +99,7 @@ const Hero = () => {
           >
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary/20 shadow-xl">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/FB_IMG_1740821877168.jpg-OcQ7BvPsEfFX9pWkhSQVU7cHurnUid.jpeg"
+                src="/images/craig.jpeg"
                 alt="Craig Iredia"
                 width={320}
                 height={320}

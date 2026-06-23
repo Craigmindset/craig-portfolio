@@ -2,7 +2,14 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Briefcase, Code, Palette } from "lucide-react";
+import {
+  Briefcase,
+  Code,
+  Megaphone,
+  Palette,
+  PenLine,
+  ScrollText,
+} from "lucide-react";
 
 const About = () => {
   const fadeIn = {
@@ -36,12 +43,30 @@ const About = () => {
       description:
         "6+ years of experience working with clients and teams to deliver exceptional websites.",
     },
+    {
+      icon: <PenLine className="h-8 w-8 text-primary" />,
+      title: "Story-telling",
+      description:
+        "Crafting compelling narratives that connect products, brands, and audiences.",
+    },
+    {
+      icon: <ScrollText className="h-8 w-8 text-primary" />,
+      title: "Writing",
+      description:
+        "Writing clear, engaging, and conversion-focused content for digital platforms.",
+    },
+    {
+      icon: <Megaphone className="h-8 w-8 text-primary" />,
+      title: "Marketing",
+      description:
+        "Planning and executing marketing strategies that improve visibility and growth.",
+    },
   ];
 
   return (
     <section
       id="about"
-      className="py-16 md:py-24 bg-muted/50 dark:bg-gray-900/50"
+      className="py-16 md:py-20 bg-muted/50 dark:bg-gray-900/50"
     >
       <div className="section-container">
         <motion.h2
@@ -51,7 +76,7 @@ const About = () => {
           transition={{ duration: 0.5 }}
           className="section-title"
         >
-          About <span className="gradient-text">Me</span>
+          Things i Love<span className="gradient-text">Doing!</span>
         </motion.h2>
 
         <motion.div
@@ -61,17 +86,17 @@ const About = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="max-w-3xl mx-auto text-center mb-16"
         >
-          <p className="text-lg text-muted-foreground">
+          {/* <p className="text-lg text-muted-foreground">
             A creative and results-driven website designer with 5+ years of
             experience in crafting user-centered and visually appealing
             websites. Proven ability to translate client needs into engaging
             designs, with expertise in Typescript, Figma, Adobe Photoshop, Corel
             Draw, and Elementor. As I stay up-to-date, I am also very
             knowledgeable with the use of advanced AI coding tools.
-          </p>
+          </p> */}
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {highlights.map((item, index) => (
             <motion.div
               key={index}
