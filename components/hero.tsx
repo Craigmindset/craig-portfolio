@@ -26,7 +26,7 @@ const Hero = () => {
                 Hi, I'm <span className="gradient-text">Craig Iredia</span>
               </h1>
               <p className="text-xl md:text-2xl text-muted-foreground mb-8">
-                Website & Mobile Application Designer
+                Digital Marketing | Website & Mobile Application Designer
               </p>
             </motion.div>
 
