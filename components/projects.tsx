@@ -311,10 +311,10 @@ const Projects = () => {
 
   const socialManagementProjects: Project[] = [
     {
-      title: "Deeparfums London",
+      title: "Softdrop Tech",
       description: "Social media management and brand growth execution.",
       image: "/images/mywork.png",
-      link: "https://www.instagram.com/deeparfumslondon?igsh=bnZoOWhwdmFkcnls",
+      link: " https://www.instagram.com/softdrop.tech?igsh=anF2MDEwY2htcHRq",
       tags: ["Social Management", "Instagram", "Brand Growth"],
       category: "Social Management",
     },
@@ -327,10 +327,10 @@ const Projects = () => {
       category: "Social Management",
     },
     {
-      title: "Softdrop Tech",
+      title: "Dee Parfums London",
       description: "Community-oriented social media account management.",
       image: "/images/mywork22.png",
-      link: "https://www.instagram.com/softdrop.tech?igsh=anF2MDEwY2htcHRq",
+      link: "https://www.instagram.com/deeparfumslondon?igsh=bnZoOWhwdmFkcnls",
       tags: ["Social Management", "Community", "Social Growth"],
       category: "Social Management",
     },
