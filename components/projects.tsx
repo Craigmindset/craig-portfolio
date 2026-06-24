@@ -46,32 +46,6 @@ const Projects = () => {
       category: "Website",
     },
     {
-      title: "Cheche Smith",
-      description:
-        "Designed and developed a vibrant e-commerce website for a fashion brand specializing in colorful, contemporary African-inspired clothing.",
-      image: "/images/chechesmithe.png",
-      link: "https://chechesmith.com",
-      github: "#",
-      achievements: [
-        "Created a visually striking online store with intuitive navigation and seamless shopping experience.",
-      ],
-      tags: ["E-commerce", "Fashion", "Responsive Design"],
-      category: "Website",
-    },
-    {
-      title: "KredMart",
-      description:
-        "Kredmart is build on nextjs and tailwindcss. A platform offer user dashboard, merchant dashboard and admin dashboard. also integrated payment gateway.",
-      image: "/images/kredmart.png",
-      link: "https://kredmart.com",
-      github: "#",
-      achievements: [
-        "Created a professional corporate identity with modern design and clear service presentation.",
-      ],
-      tags: ["E-commerce", "Dashboard", "Payment Gateway"],
-      category: "Website",
-    },
-    {
       title: "NF Award",
       description:
         "Developed the official website for Nigeria Fitness Awards, a platform celebrating excellence in the fitness industry across Nigeria.",
@@ -85,29 +59,77 @@ const Projects = () => {
       category: "Website",
     },
     {
+      title: "Cheche Smith",
+      description:
+        "Designed and developed a vibrant e-commerce website for a fashion brand specializing in colorful, contemporary African-inspired clothing.",
+      image: "/images/chechesmithe.png",
+      link: "https://chechesmith.com",
+      github: "#",
+      achievements: [
+        "Created a visually striking online store with intuitive navigation and seamless shopping experience.",
+      ],
+      tags: ["E-commerce", "Fashion", "Responsive Design"],
+      category: "Website",
+    },
+    {
+      title: "Linkmi",
+      description:
+        "A Clinical site that connects africa to international medical service providers for advanced medical treatments.",
+      image: "/images/linkmi.png",
+      link: "https://linkmi.com.ng",
+      github: "#",
+      achievements: [],
+      tags: ["Web Design", "Digital Agency", "UI/UX"],
+      category: "Website",
+    },
+
+    {
+      title: "Truevoix",
+      description: "Website & Mobile Application",
+      image: "/images/truevoix.png",
+      link: "https://truevoix.com",
+      github: "#",
+      achievements: [],
+      tags: ["Corporate Website", "Web Experience", "Responsive Design"],
+      category: "Website",
+    },
+
+    {
+      title: "Tecwurld",
+      description:
+        "Official business website showcasing services, brand information, and contact details.",
+      image: "/images/tecwurld.png",
+      link: "https://tecwurld.com",
+      github: "#",
+      achievements: [],
+      tags: ["Business Website", "Brand Presence", "Responsive Design"],
+      category: "Website",
+    },
+
+    {
+      title: "KredMart",
+      description:
+        "Kredmart is build on nextjs and tailwindcss. A platform offer user dashboard, merchant dashboard and admin dashboard. also integrated payment gateway.",
+      image: "/images/kredmart.png",
+      link: "https://kredmart.com",
+      github: "#",
+      achievements: [
+        "Created a professional corporate identity with modern design and clear service presentation.",
+      ],
+      tags: ["E-commerce", "Dashboard", "Payment Gateway"],
+      category: "Website",
+    },
+
+    {
       title: "Ark-of-light App",
       description: "mobile application  designed for Android and ios users.",
       image: "/images/arkoflight.png",
-      link: "#",
+      link: "https://play.google.com/store/apps/details?id=com.infinitymind.index.TheArkApp",
       github: "https://github.com/Craigmindset/arkoflight",
       achievements: [
         "Mobile Application built with React Native and Expo for both Android and iOS platforms.",
       ],
       tags: ["Mobile Application", "Backend", "Admin Dashboard"],
-      category: "Website",
-    },
-
-    {
-      title: "Prostar Technical",
-      description:
-        "Developed a modern website for a solar energy solutions provider, showcasing their residential and commercial services with a focus on sustainability.",
-      image: "/images/prostartechnical.png",
-      link: "https://prostartechnical.com/",
-      github: "#",
-      achievements: [
-        "Created a professional, responsive design that effectively communicates the company's renewable energy solutions and services.",
-      ],
-      tags: ["Account mgmt", "admin panel", "Next.js"],
       category: "Website",
     },
     {
@@ -121,6 +143,45 @@ const Projects = () => {
       tags: ["online booking", "e-shopping", "Responsive Design"],
       category: "Website",
     },
+    {
+      title: "Effideli",
+      description:
+        "Professional Full-stack project with Admin login and user authentication.",
+      image:
+        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/effideli-8bnxDoH5zK6YJZauh5hmmivB8wcMzD.png",
+      link: "https://effideli.com/",
+      github: "https://github.com/Craigmindset/effifeli-web-app",
+      achievements: [],
+      tags: ["Full-stack", "Authentication", "Admin Dashboard"],
+      category: "Website",
+    },
+    {
+      title: "Bookville Reading Competition",
+      description:
+        "Created a digital platform for Bookville World's Reading Competition, promoting literacy and intellectual development among young participants.",
+      image: "/images/bookvilleworld-new.png",
+      link: "https://brc.bookvilleworld.com",
+      github: "#",
+      achievements: [
+        "Developed an engaging platform that encourages reading comprehension and critical thinking skills.",
+      ],
+      tags: ["php", "Elementor", "wordpress"],
+      category: "Website",
+    },
+    {
+      title: "Prostar Technical",
+      description:
+        "Developed a modern website for a solar energy solutions provider, showcasing their residential and commercial services with a focus on sustainability.",
+      image: "/images/prostartechnical.png",
+      link: "https://prostartechnical.com/",
+      github: "#",
+      achievements: [
+        "Created a professional, responsive design that effectively communicates the company's renewable energy solutions and services.",
+      ],
+      tags: ["Account mgmt", "admin panel", "Next.js"],
+      category: "Website",
+    },
+
     {
       title: "Ventury Ltd",
       description:
@@ -147,19 +208,7 @@ const Projects = () => {
       tags: ["Education", "Primary School", "Academic Excellence"],
       category: "Website",
     },
-    {
-      title: "Bookville Reading Competition",
-      description:
-        "Created a digital platform for Bookville World's Reading Competition, promoting literacy and intellectual development among young participants.",
-      image: "/images/bookvilleworld-new.png",
-      link: "https://brc.bookvilleworld.com",
-      github: "#",
-      achievements: [
-        "Developed an engaging platform that encourages reading comprehension and critical thinking skills.",
-      ],
-      tags: ["php", "Elementor", "wordpress"],
-      category: "Website",
-    },
+
     {
       title: "JOB Alerts",
       description:
@@ -187,18 +236,7 @@ const Projects = () => {
       tags: ["Startup Platform", "Accelerator", "Investment"],
       category: "Website",
     },
-    {
-      title: "Effideli",
-      description:
-        "Professional Full-stack project with Admin login and user authentication.",
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/effideli-8bnxDoH5zK6YJZauh5hmmivB8wcMzD.png",
-      link: "https://effideli.com/",
-      github: "https://github.com/Craigmindset/effifeli-web-app",
-      achievements: [],
-      tags: ["Full-stack", "Authentication", "Admin Dashboard"],
-      category: "Website",
-    },
+
     {
       title: "Airdomax",
       description:
@@ -223,17 +261,7 @@ const Projects = () => {
       tags: ["Google Maps API", "Authentication", "Community"],
       category: "Website",
     },
-    {
-      title: "Linkmi",
-      description:
-        "A Clinical site that connects africa to international medical service providers for advanced medical treatments.",
-      image: "/images/linkmi.png",
-      link: "https://linkmi.com.ng",
-      github: "#",
-      achievements: [],
-      tags: ["Web Design", "Digital Agency", "UI/UX"],
-      category: "Website",
-    },
+
     {
       title: "Gospel Pillars ERP",
       description:

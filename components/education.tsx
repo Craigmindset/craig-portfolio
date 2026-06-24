@@ -1,16 +1,26 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Award } from "lucide-react"
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Award } from "lucide-react";
 
 const Education = () => {
   const educations = [
     {
       institution: "Harvardx (Harvard university Affiliation)",
-      degree: "Introduction to AI Modeling",
-      period: "Expected Graduation 2025",
+      degree: "AI Security",
+      period: "Expected Graduation 2026",
+    },
+    {
+      institution: "CISCO Networking Academy",
+      degree: "Cybersecurity",
+      period: "2025",
+    },
+    {
+      institution: "ISC2 Cybersecurity Training",
+      degree: "Certified Cybersecurity",
+      period: "2025",
     },
     {
       institution: "ALX Professional Foundation",
@@ -27,12 +37,13 @@ const Education = () => {
       degree: "Civil Engineering (Bsc)",
       period: "Oct 2002 - November 2006",
     },
-  ]
+  ];
 
   const certificates = [
     {
       title: "Programming in Python (Freecodecamp)",
-      description: "Python foundation syntax, functions, Scientific Computing with python.",
+      description:
+        "Python foundation syntax, functions, Scientific Computing with python.",
       link: "https://www.freecodecamp.org/certification/fcc5e160dfd-db07-4983-bb3d-f8b8b8f62554/scientific-computing-with-python-v7",
     },
     {
@@ -43,13 +54,23 @@ const Education = () => {
     },
     {
       title: "Software Engineering",
-      description: "Web application development, Mobile application development, GitHub",
+      description:
+        "Web application development, Mobile application development, GitHub",
       link: "https://drive.google.com/file/d/1TGz2E_26htT-xLPo36KydCC-AXPe1NUI/view?usp=sharing",
     },
-  ]
+    {
+      title: "CISCO Cybersecurity",
+      description:
+        "Systems Security, Network Security, Cryptography, Cybersecurity Operations, Endpoint Security, Cloud Security",
+      link: "https://www.credly.com/badges/26b9c432-3e0e-4fa6-b29d-1ca71a86f6cd",
+    },
+  ];
 
   return (
-    <section id="education" className="py-16 md:py-24 bg-muted/50 dark:bg-gray-900/50">
+    <section
+      id="education"
+      className="py-16 md:py-14 bg-muted/50 dark:bg-gray-900/50"
+    >
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -71,14 +92,22 @@ const Education = () => {
             <h3 className="text-2xl font-semibold mb-6">Education</h3>
             <div className="space-y-4">
               {educations.map((edu, index) => (
-                <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
+                <Card
+                  key={index}
+                  className="border-none shadow-md hover:shadow-lg transition-shadow"
+                >
                   <CardContent className="p-6">
                     <div className="flex flex-col md:flex-row md:items-center justify-between">
                       <div>
-                        <h4 className="text-lg font-medium">{edu.institution}</h4>
+                        <h4 className="text-lg font-medium">
+                          {edu.institution}
+                        </h4>
                         <p className="text-primary mt-1">{edu.degree}</p>
                       </div>
-                      <Badge variant="outline" className="mt-2 md:mt-0 whitespace-nowrap">
+                      <Badge
+                        variant="outline"
+                        className="mt-2 md:mt-0 whitespace-nowrap"
+                      >
                         {edu.period}
                       </Badge>
                     </div>
@@ -97,7 +126,10 @@ const Education = () => {
             <h3 className="text-2xl font-semibold mb-6">Certificates</h3>
             <div className="space-y-4">
               {certificates.map((cert, index) => (
-                <Card key={index} className="border-none shadow-md hover:shadow-lg transition-shadow">
+                <Card
+                  key={index}
+                  className="border-none shadow-md hover:shadow-lg transition-shadow"
+                >
                   <CardContent className="p-6">
                     <div className="flex items-start gap-4">
                       <div className="mt-1 p-2 rounded-full bg-primary/10 flex-shrink-0">
@@ -105,7 +137,9 @@ const Education = () => {
                       </div>
                       <div>
                         <h4 className="text-lg font-medium">{cert.title}</h4>
-                        <p className="text-muted-foreground mt-1">{cert.description}</p>
+                        <p className="text-muted-foreground mt-1">
+                          {cert.description}
+                        </p>
                         {cert.link && (
                           <a
                             href={cert.link}
@@ -126,7 +160,7 @@ const Education = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Education
+export default Education;

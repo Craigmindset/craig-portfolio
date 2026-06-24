@@ -36,9 +36,9 @@ const Hero = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg text-muted-foreground mb-10"
             >
-              If you're looking for a Digital content designer and Developer
-              whose commitment is built on teamwork and achieving set goals,
-              then <span className="text-yellow-400">I'm your guy</span>. My
+              If you're looking for an Executive mindset, branded with an eye
+              for digital design, Software development and AI security, then{" "}
+              <span className="text-yellow-400">I'm your guy</span>. My
               experience spans marketing, photography, content management, and
               application development. So invite me to join your team and let's
               take on the challenge!

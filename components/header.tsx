@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Sun, Moon } from "lucide-react";
@@ -10,6 +11,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [activeHash, setActiveHash] = useState("");
+  const pathname = usePathname();
   const { theme, setTheme } = useTheme();
 
   useEffect(() => {
@@ -31,14 +33,26 @@ const Header = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const isActive = (href: string) => activeHash === href;
+  const getHashFromHref = (href: string) => {
+    const hashIndex = href.indexOf("#");
+    return hashIndex >= 0 ? href.slice(hashIndex) : "";
+  };
+
+  const isActive = (href: string) => {
+    if (href.includes("#")) {
+      return pathname === "/" && activeHash === getHashFromHref(href);
+    }
+
+    return pathname === href;
+  };
 
   const navItems = [
-    { name: "About", href: "#about" },
-    { name: "Skills", href: "#skills" },
-    { name: "Projects", href: "#projects" },
-    { name: "Education", href: "#education" },
-    { name: "Contact", href: "#contact" },
+    { name: "About", href: "/#about" },
+    { name: "Skills", href: "/#skills" },
+    { name: "Projects", href: "/#projects" },
+    { name: "Education", href: "/#education" },
+    { name: "Contact", href: "/#contact" },
+    { name: "My Experince", href: "/my-experince" },
   ];
 
   return (
@@ -65,7 +79,11 @@ const Header = () => {
                     ? "text-green-500 font-semibold"
                     : "text-muted-foreground hover:text-primary"
                 }`}
-                onClick={() => setActiveHash(item.href)}
+                onClick={() => {
+                  if (item.href.includes("#")) {
+                    setActiveHash(getHashFromHref(item.href));
+                  }
+                }}
               >
                 {item.name}
               </Link>
@@ -134,7 +152,9 @@ const Header = () => {
                 }`}
                 onClick={() => {
                   setIsMenuOpen(false);
-                  setActiveHash(item.href);
+                  if (item.href.includes("#")) {
+                    setActiveHash(getHashFromHref(item.href));
+                  }
                 }}
               >
                 {item.name}

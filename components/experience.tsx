@@ -9,6 +9,15 @@ const Experience = () => {
   const experiences = [
     {
       title: "Senior Frontend Developer",
+      company: "Codexter Technologies",
+      period: "Present",
+      link: "#",
+      achievements: [
+        "As cofounder, has shaped the industry of software development and executive management.",
+      ],
+    },
+    {
+      title: "CTO",
       company: "Tecwurld Limited",
       period: "June 2023 - Present",
       link: "https://tecwurld.com",
@@ -20,6 +29,18 @@ const Experience = () => {
       ],
     },
     {
+      title: "AI Trainer",
+      company: "Invisible.co",
+      period: "Remote",
+      link: "https://invisibletech.ai/",
+      achievements: [
+        "Trained and evaluated AI model outputs to improve response quality, factual accuracy, and instruction adherence.",
+        "Reviewed prompts and responses against project guidelines, providing structured feedback to improve model behavior.",
+        "Collaborated with distributed teams to maintain annotation quality and meet delivery targets across AI training tasks.",
+      ],
+    },
+
+    {
       title: "Application Developer",
       company: "SoftDrop",
       period: "March 2022",
@@ -30,24 +51,14 @@ const Experience = () => {
         "Represented the Start up in International pitch presentation and venture capitalist meetings.",
       ],
     },
-    {
-      title: "Graphic & Website Designer",
-      company: "Upwork",
-      period: "Freelancer",
-      link: "#",
-      achievements: [
-        "Designed and launched over 14 visually compelling websites.",
-        "Collaborated with cross-functional teams to create branding assets, including logos, social media graphics, and marketing materials.",
-        "Optimized website performance, reducing load times by 40% through strategic use of web technologies and design best practices, enhancing overall user experience.",
-      ],
-    },
   ];
 
   return (
     <section
       id="experience"
-      className="py-16 md:py-24 bg-muted/50 dark:bg-gray-900/50"
+      className="relative overflow-hidden py-16 md:py-24"
     >
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_hsl(var(--primary)/0.18),_transparent_55%)]" />
       <div className="section-container">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -59,7 +70,8 @@ const Experience = () => {
           Work <span className="gradient-text">Experience</span>
         </motion.h2>
 
-        <div className="space-y-8 mt-12">
+        <div className="relative mt-12 pl-8 md:pl-10">
+          <div className="absolute left-2 top-2 h-[calc(100%-8px)] w-px bg-gradient-to-b from-primary/70 via-primary/30 to-transparent md:left-3" />
           {experiences.map((exp, index) => (
             <motion.div
               key={index}
@@ -67,8 +79,10 @@ const Experience = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="relative mb-8 last:mb-0"
             >
-              <Card className="border-none shadow-md hover:shadow-lg transition-shadow">
+              <span className="absolute -left-[1.85rem] top-6 h-3 w-3 rounded-full border-2 border-primary/70 bg-background shadow-[0_0_0_6px_hsl(var(--primary)/0.12)] md:-left-[2.35rem]" />
+              <Card className="border border-border/70 bg-card/80 shadow-md backdrop-blur-sm transition-all duration-300 hover:-translate-y-0.5 hover:shadow-xl">
                 <CardContent className="p-6">
                   <div className="flex flex-col md:flex-row md:items-center justify-between mb-4">
                     <div>
@@ -77,7 +91,7 @@ const Experience = () => {
                         <p className="text-primary font-medium">
                           {exp.company}
                         </p>
-                        {exp.link && (
+                        {exp.link && exp.link !== "#" && (
                           <a
                             href={exp.link}
                             target="_blank"
